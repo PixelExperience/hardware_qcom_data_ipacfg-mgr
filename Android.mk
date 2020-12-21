@@ -1,3 +1,5 @@
+ifneq ($(PRODUCT_PLATFORM_SOD),true)
+
 ifneq ($(TARGET_BOARD_AUTO),true)
 
     LOCAL_PATH := $(call my-dir)
@@ -6,3 +8,5 @@ ifneq ($(TARGET_BOARD_AUTO),true)
         include $(call first-makefiles-under,$(LOCAL_PATH)/msm8998)
     endif
 endif
+
+endif #PRODUCT_PLATFORM_SOD
